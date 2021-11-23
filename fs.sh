@@ -12,5 +12,6 @@ do
 done
 
 # Swap Partition
+swapoff $SWAP_PARTITION > "/dev/null" 2>&1
 mkswap $SWAP_PARTITION
 swapon $SWAP_PARTITION
