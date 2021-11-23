@@ -17,4 +17,8 @@ source ./fs.sh
 
 echo "-------------MOUNTING PARTITIONS------------"
 source ./mount.sh
+
+echo "-----------UPDATING /etc/fstab FILE---------"
+source ./fstab.sh
+
 echo DONE
