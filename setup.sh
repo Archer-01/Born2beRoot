@@ -17,3 +17,4 @@ source ./fs.sh
 
 echo "-------------MOUNTING PARTITIONS------------"
 source ./mount.sh
+echo DONE
