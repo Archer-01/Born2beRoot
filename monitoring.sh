@@ -75,8 +75,8 @@ fi
 #   | || |   | |_) | | |   / _ \| '_ \| '_ \ / _ \/ __| __| |/ _ \| '_ \/ __|
 #   | || |___|  __/  | |__| (_) | | | | | | |  __/ (__| |_| | (_) | | | \__ \
 #   |_| \____|_|      \____\___/|_| |_|_| |_|\___|\___|\__|_|\___/|_| |_|___/
-TCP_CONN=`netstat -a | grep "ESTABLISHED" | wc -l`
-echo "#Connexions TCP : ${TCP_CONN}"
+TCP_CONN=`netstat | grep -E "(^tcp)*(ESTABLISHED$)" | wc -l`
+echo "#Connexions TCP : ${TCP_CONN} ESTABLISHED"
 
 #  _   _                 _                _          ____                  _
 # | | | |___  ___ _ __  | |    ___   __ _(_)_ __    / ___|___  _   _ _ __ | |_
