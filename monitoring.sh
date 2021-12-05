@@ -44,7 +44,7 @@ echo "#Disk Usage: ${DISK_USED}/${DISK_TOTAL} ($DISK_PCT)"
 # | |   | |_) | | | | | |   / _ \ / _` |/ _` |
 # | |___|  __/| |_| | | |__| (_) | (_| | (_| |
 #  \____|_|    \___/  |_____\___/ \__,_|\__,_|
-CPU_LOAD=`top -bn1 | head -n 1 | awk '{printf "%.1f", $10}'`
+CPU_LOAD=`top -bn1 | grep "^%Cpu(s)" | awk '{print $2}'`
 echo "#CPU load: ${CPU_LOAD}%"
 
 #  _              _     ____              _     _____ _
